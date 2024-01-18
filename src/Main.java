@@ -9,7 +9,23 @@ class Main {
 
         ArrayList<User> users = DataBase.display("select * from users");
 
-        System.out.println(users.get(0).name);
+    //     for (User user : users) {
+    //         System.out.println(user.id + " " + user.name);
+    //     }
+
+    //   System.out.println(DataBase.update("UPDATE users SET name = 'Miroo' WHERE id = 12"));  
+
+    //     users = DataBase.display("select * from users");
+    //     for (User user : users) {
+    //         System.out.println(user.id + " " + user.name);
+        // }
+
+        System.out.println(DataBase.update("INSERT INTO users (name) VALUES ('857dd')"));
+
+        users = DataBase.display("select * from users");
+        for (User user : users) {
+            System.out.println(user.id + " " + user.name);
+        }
 
         // Connection connection = DBConnectionSingleton.getConnection();
 
